@@ -31,7 +31,7 @@ An interactive and responsive web dashboard built using **Next.js**, **Tailwind 
 
 ```bash
 # Clone the repo
-git clone https://github.com/your-username/Interactive-Dashboard.git
+git clone https://github.com/Binti016/Interactive-Dashboard.git
 cd Interactive-Dashboard
 
 # Install dependencies
