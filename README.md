@@ -35,9 +35,6 @@ git clone https://github.com/Binti016/Interactive-Dashboard.git
 cd Interactive-Dashboard
 
 # Install dependencies
-npm install
-
-# If it doesn't work then run
 npm install --legacy-peer-deps
 
 # Run the development server
