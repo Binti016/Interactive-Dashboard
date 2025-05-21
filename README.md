@@ -26,6 +26,8 @@ An interactive and responsive web dashboard built using **Next.js**, **Tailwind 
 - **Icons & UI**: Lucide-react, Heroicons, Framer Motion
 - **State/Storage**: LocalStorage, useState, useEffect
 
+![Watch the video](C:\Users\BINTI\Desktop\Task-2.mp4)
+
 ## Getting Started
 
 ```bash
