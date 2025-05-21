@@ -29,12 +29,10 @@ export default function CustomerCharts({ customers }) {
     return acc;
   }, {});
 
- 
   const maritalDivisionCounts = {};
   customers.forEach((customer) => {
     const division = customer.Division || 'Unknown';
     const marital = customer.MaritalStatus?.toUpperCase() || 'Unknown';
-
     if (!maritalDivisionCounts[division]) {
       maritalDivisionCounts[division] = {};
     }
@@ -59,7 +57,7 @@ export default function CustomerCharts({ customers }) {
       {
         label: 'Customers by Division',
         data: Object.values(divisionCounts),
-        backgroundColor: ['#facc15', '#34d399', '#60a5fa', '#f87171', '#a78bfa'],
+        backgroundColor: '#60a5fa', 
       },
     ],
   };
@@ -94,8 +92,7 @@ export default function CustomerCharts({ customers }) {
 
   const femalePercentage =
     customers.length > 0
-      ? customers.filter((c) => c.Gender?.toUpperCase() === 'F').length /
-        customers.length
+      ? customers.filter((c) => c.Gender?.toUpperCase() === 'F').length / customers.length
       : 0;
 
   const incomeGenderBuckets = {
@@ -157,14 +154,12 @@ export default function CustomerCharts({ customers }) {
           <Bar data={divisionData} />
         </div>
       </div>
-
       <div className="bg-white p-4 rounded shadow h-96">
         <h2 className="text-lg font-semibold mb-2 text-center">Marital Status by Division</h2>
         <div className="h-72 mt-8">
           <Bar data={stackedBarData} options={stackedBarOptions} />
         </div>
       </div>
-
       <div className="bg-white p-4 rounded shadow h-96 flex flex-col justify-center items-center">
         <h2 className="text-lg font-semibold mb-2 text-center">Female Customer Percentage</h2>
         <div className="h-72 w-full flex justify-center items-center">
@@ -179,7 +174,6 @@ export default function CustomerCharts({ customers }) {
           />
         </div>
       </div>
-
       <div className="bg-white p-4 rounded shadow h-96">
         <h2 className="text-lg font-semibold mb-2 text-center">Income Distribution by Gender</h2>
         <div className="h-72 mt-8">
